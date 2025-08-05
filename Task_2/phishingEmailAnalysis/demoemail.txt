@@ -1,0 +1,8 @@
+From: PayPal <support@paypa1.com>
+To: victim@example.com
+Subject: Urgent! Verify Your Account
+
+Dear Customer,
+Your account is locked. Click below to verify:
+http://secure-paypa1-login.com/verify
+Failure to act will suspend your account in 24 hours.
