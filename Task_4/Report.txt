@@ -1,0 +1,73 @@
+# Configuring and Testing Firewall Rules in Kali Linux using UFW
+
+**Objective:**  
+To configure and test basic firewall rules in Kali Linux to allow or block specific network traffic.
+
+**Tools Used:**  
+- Operating System: Kali Linux  
+- Firewall: UFW (Uncomplicated Firewall)  
+
+**Deliverables:**  
+- Screenshot/configuration file showing firewall rules applied.  
+
+---
+
+## Procedure
+
+**Step 1: Install and Enable UFW**  
+```bash
+sudo apt update
+sudo apt install ufw -y
+sudo ufw enable
+```
+(Screenshot 1: UFW enabled)
+
+**Step 2: View Current Rules**  
+```bash
+sudo ufw status numbered
+```
+(Screenshot 2: Current firewall rules)
+
+**Step 3: Block Inbound Traffic on Port 23 (Telnet)**  
+```bash
+sudo ufw deny 23
+```
+(Screenshot 3: Rule added to block port 23)
+
+**Step 4: Test the Block Rule**  
+```bash
+telnet 127.0.0.1 23
+```
+Expected output: **Connection refused**.  
+(Screenshot 4: Telnet connection failed)
+
+**Step 5: Allow SSH (Port 22)**  
+```bash
+sudo ufw allow 22
+```
+(Screenshot 5: SSH allowed)
+
+**Step 6: Remove the Test Block Rule**  
+First, check rule numbers:  
+```bash
+sudo ufw status numbered
+```
+Then delete:  
+```bash
+sudo ufw delete <rule_number>
+```
+(Screenshot 6: Rule removed)
+
+**Step 7: Final Firewall Status**  
+```bash
+sudo ufw status numbered
+```
+(Screenshot 7: Final firewall configuration)
+
+---
+
+## Summary
+The firewall was configured successfully using UFW. Port 23 was blocked to prevent Telnet access, and the block was verified. Port 22 was allowed for SSH connections. The test rule was later removed to restore the firewall to its original state.
+
+**Outcome:**  
+Basic firewall management skills were learned, including adding, testing, and removing rules in Kali Linux.
