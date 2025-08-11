@@ -1,0 +1,23 @@
+Task 5: Capture and Analyze Network Traffic Using Wireshark
+
+Objective:
+To capture live network packets and identify basic protocols and traffic types using Wireshark.
+
+Environment:
+- OS: Kali Linux
+- Tool: Wireshark (Latest version from apt repository)
+
+Protocols Identified:
+1. HTTP (Port 80) - Hypertext Transfer Protocol used for unencrypted web communication.
+2. TCP - Transmission Control Protocol that provides reliable, ordered delivery of data between applications.
+3. DNS (Port 53) - Domain Name System protocol used for translating domain names into IP addresses.
+
+Summary of Findings:
+- Captured packets while visiting websites and performing network queries.
+- Example:
+  1. HTTP Packet: Source IP 192.168.1.10 → Destination IP 93.184.216.34, Protocol: HTTP, Length: 512 bytes
+  2. TCP Packet: Source IP 192.168.1.10 → Destination IP 142.250.183.110, Protocol: TCP, Length: 60 bytes
+  3. DNS Query: Source IP 192.168.1.10 → Destination IP 8.8.8.8, Protocol: DNS, Length: 74 bytes
+
+Conclusion:
+This exercise improved understanding of live packet capturing, protocol filtering, and basic network traffic analysis.
